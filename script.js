@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     document.addEventListener('keydown', (event) => {
-        if (event.key === 'Enter') {
+        if (event.key === 'F12') {
             if (generating) {
                 stopGeneratingRandomNumbers();
             } else {
