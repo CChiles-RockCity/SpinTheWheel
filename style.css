@@ -1,0 +1,18 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Trebuchet MS';
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+}
+
+#random-number-container {
+    font-size: 75vh; /* 75% of the screen height */
+    padding: 20px;
+    border: none; /* Removed border */
+    background-color: transparent; /* Transparent background for the container */
+    text-align: center;
+}
