@@ -1,0 +1,11 @@
+{
+  "name": "spin-the-wheel",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Chapter picker for the Rock City Church Spin the Wheel game",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node test/run.js && node test/engine.js && node test/server.js"
+  },
+  "engines": { "node": ">=16" }
+}

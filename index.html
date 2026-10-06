@@ -1,18 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random Number Generator</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spin the Wheel</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="random-number-container">
-        <span id="random-number"></span>
+  <main id="stage" aria-live="polite">
+    <div id="book" class="book">Pick a book</div>
+    <div class="label">CHAPTER</div>
+    <div id="number" class="number" data-state="idle">?</div>
+  </main>
+  <div id="conn" class="conn" hidden>Reconnecting…</div>
+
+  <div id="typed" class="typed" hidden></div>
+
+  <section id="panel" class="panel" aria-label="Operator controls">
+    <div class="bar">
+      <div class="search">
+        <span class="hint">Type a book (e.g. <kbd>psa</kbd>, <kbd>1jo</kbd>), then press <kbd>Enter</kbd> to spin</span>
+        <span id="status" class="status"></span>
+      </div>
+      <div class="actions">
+        <label>Spin time
+          <input id="duration" type="number" min="1" max="30" step="1" value="5"> s
+        </label>
+        <button id="sound" type="button" aria-pressed="true">Sound: on</button>
+        <button id="fullscreen" type="button">Fullscreen</button>
+        <button id="present" type="button" title="Hide these controls (Tab)">Hide controls</button>
+        <button id="spin" type="button" class="spin" disabled>SPIN</button>
+      </div>
     </div>
-   <script src="script.js"></script>
+    <div class="books" id="books"></div>
+  </section>
+
+  <script src="src/books.js"></script>
+  <script src="src/machine.js"></script>
+  <script src="src/engine.js"></script>
+  <script src="src/picker.js"></script>
+  <script src="src/remote.js"></script>
+  <script src="src/app.js"></script>
 </body>
-    <body>
-        <h1>Replay: Enter</h1>
-    </body>
 </html>

@@ -1,0 +1,5 @@
+# Local source material (Companion configs contain network details; zips/node_modules are large)
+Spin The Wheel/
+*.zip
+node_modules/
+.DS_Store
